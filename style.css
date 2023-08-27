@@ -1,0 +1,69 @@
+.background{
+    width: 100vw;
+    height: 100vh;
+    background: #fff;
+    z-index: -1;
+    position: absolute;
+    transition: 0.3s;
+}
+
+label{
+    width: 500px;
+    height: 200px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgb(red, green, blue), inset  0px -5px 15px rgb(255, 225, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+label::after{
+    width: 500px;
+    height: 200px;
+    position: relative;
+    display: block;
+    background: #583030;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 10px rgb(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+label svg{
+    position: absolute;
+    width: 120px;
+    top: 40px;
+    z-index: 100;
+}
+
+label svg.sun{
+    left: 40px; fill: rgb(44, 104, 39);
+    transition: 0.3s;
+}
+label svg.moon{
+    left: 40px; fill: black;
+    transition: 0.3s;
+}
+
+input{
+    width: 0;height: 0;
+    visibility: hidden;
+}
+
+input:checked + label {background: pink;}
+c::after{
+    left: 490px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #c92222, #3a3a3a);
+}
+input:checked + label svg.sun {fill: aqua;}
+input:checked + label svg.moon {fill: peru;}
+input:checked + label + .background {
+    background: #242424;
+}
+
+input:active::after{
+width: 260px;
+}
